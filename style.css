@@ -514,20 +514,8 @@ section {
     left: 0;
     width: 100%;
     height: 6px;
-    background: var(--primary-color);
+    background: linear-gradient(90deg, var(--primary-color), #0284c7);
     transition: transform 0.3s ease;
-}
-
-.portfolio-card:nth-child(1)::before {
-    background: linear-gradient(90deg, #f59e0b, #ea580c); /* Satria Data: Gold-Orange Victory */
-}
-
-.portfolio-card:nth-child(2)::before {
-    background: linear-gradient(90deg, #06b6d4, #0891b2); /* Dokter Data: Intelligence Cyan/Teal */
-}
-
-.portfolio-card:nth-child(3)::before {
-    background: linear-gradient(90deg, #6366f1, #4f46e5); /* Gammafest: Technology Indigo/Purple */
 }
 
 .portfolio-card:hover {
@@ -825,6 +813,83 @@ footer {
     animation: ship-bob 3s infinite ease-in-out, ship-sail 45s infinite linear;
 }
 
+/* === WHALE ANIMASI (seperti kapal layar, di section organisasi) === */
+.whale-container {
+    position: absolute;
+    bottom: 60px;
+    left: -120px;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+    pointer-events: none;
+    transform-origin: center center;
+    animation: whale-bob 4s infinite ease-in-out, whale-sail 50s infinite linear;
+}
+
+.whale-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+    opacity: 0.7;
+}
+
+/* Whale ke-2: lebih kecil, lebih tinggi, lebih lambat */
+.whale-container--2 {
+    bottom: 200px;
+    width: 70px;
+    height: 70px;
+    animation: whale-bob 5s infinite ease-in-out, whale-sail 70s 10s infinite linear;
+}
+
+.whale-container--2 .whale-img {
+    opacity: 0.45;
+}
+
+/* Bobbing naik-turun seperti kapal */
+@keyframes whale-bob {
+    0%, 100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(3deg);
+    }
+}
+
+/* Berlayar dari kiri ke kanan seperti kapal */
+@keyframes whale-sail {
+    0% {
+        left: -120px;
+    }
+    100% {
+        left: 105%;
+    }
+}
+
+/* Ensure organisasi content stays ON TOP of whales */
+#organisasi .section-title,
+#organisasi .timeline {
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .whale-container {
+        width: 70px;
+        height: 70px;
+        bottom: 40px;
+        animation: whale-bob 4s infinite ease-in-out, whale-sail 35s infinite linear;
+    }
+    .whale-container--2 {
+        width: 50px;
+        height: 50px;
+        bottom: 140px;
+        animation: whale-bob 5s infinite ease-in-out, whale-sail 50s 8s infinite linear;
+    }
+}
+
+
 .ship {
     width: 100%;
     height: 100%;
@@ -990,4 +1055,4 @@ footer {
         height: 40px;
         animation: ship-bob 3s infinite ease-in-out, ship-sail 30s infinite linear;
     }
-}
+}
