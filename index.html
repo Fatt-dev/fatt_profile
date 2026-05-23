@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Pribadi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Fatt.</div>
+        <ul>
+            <li><a href="#profil">Profil</a></li>
+            <li><a href="#keahlian">Keahlian</a></li>
+            <li><a href="#organisasi">Organisasi</a></li>
+            <li><a href="#portofolio">Portofolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="profil" class="theme-dark">
+        <div id="ocean-bubbles" class="bubbles-container"></div>
+        <div class="profile-img-container reveal-left">
+            <img src="assets/profile.png" alt="Foto Profil" class="profile-img">
+        </div>
+        <div class="profile-text reveal-right">
+            <h1>Halo, saya Al Fath Miftahurrizky Hikmawan!.</h1>
+            <p id="profile-desc" class="profile-desc">Mahasiswa program studi Statistika di
+                Universitas Jenderal Soedirman yang saat ini sedang menempuh tahun kedua perkuliahan. Saya memiliki
+                ketertarikan yang besar dalam dunia olah data, analisis statistik, dan bagaimana data dapat membantu
+                pengambilan keputusan. Melalui website ini, saya ingin membagikan perjalanan belajar saya, proyek-proyek
+                data yang sedang saya kerjakan, serta opini saya mengenai perkembangan data science ke depan. Mari
+                terhubung!</p>
+        </div>
+
+        <!-- Kapal Layar Animasi -->
+        <div class="ship-container">
+            <svg class="ship" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <!-- Hull (Lambung Kapal) -->
+                <path d="M12,44 C12,44 20,48 32,48 C44,48 52,44 52,44 L48,52 C48,52 40,54 32,54 C24,54 16,52 16,52 Z"
+                    fill="#0284c7" />
+                <!-- Deck line -->
+                <path d="M12,44 L52,44 L48,46 L16,46 Z" fill="#0369a1" />
+                <!-- Mast (Tiang Layar) -->
+                <path d="M30,12 L30,44 L32,44 L32,12 Z" fill="#475569" />
+                <!-- Main Sail (Layar Utama) -->
+                <path d="M32,14 L48,38 L32,38 Z" fill="#f8fafc" />
+                <!-- Jib Sail (Layar Depan) -->
+                <path d="M30,18 L18,38 L30,38 Z" fill="#e2e8f0" />
+                <!-- Flag (Bendera Merah) -->
+                <polygon points="30,8 30,14 36,11" fill="#ef4444" />
+            </svg>
+        </div>
+
+        <!-- Wave divider: Profil (Dark) -> Keahlian (Light) -->
+        <div class="wave-container">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(240, 249, 255, 0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(240, 249, 255, 0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(240, 249, 255, 0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#f0f9ff" />
+                </g>
+            </svg>
+        </div>
+    </section>
+
+    <section id="keahlian" class="theme-light">
+        <h2 class="section-title reveal">Bidang Keahlian</h2>
+
+        <div class="keahlian-container">
+            <!-- SISI KIRI: Bidang yang Disukai (Dua Kotak Terpisah) -->
+            <div class="keahlian-kolom reveal-left">
+                <h3 class="sub-title">Bidang yang Disukai</h3>
+                <div class="skills-stack" style="gap: 20px;">
+                    <!-- Kotak 1: Machine Learning -->
+                    <div class="skill-card-v2 favorite-field">
+                        <div class="skill-header">
+                            <span class="skill-icon">🤖</span>
+                            <h4>Machine Learning & Deep Learning</h4>
+                        </div>
+                        <p>Tertarik mengembangkan model prediktif dan algoritma cerdas untuk menyelesaikan berbagai
+                            masalah kompleks.</p>
+                    </div>
+
+                    <!-- Kotak 2: Energi Terbarukan -->
+                    <div class="skill-card-v2 favorite-field">
+                        <div class="skill-header">
+                            <span class="skill-icon">🌱</span>
+                            <h4>Energi Terbarukan (Renewable Energy)</h4>
+                        </div>
+                        <p>Memiliki visi memanfaatkan analisis data statistik dan machine learning untuk mendukung
+                            transisi energi yang berkelanjutan dan ramah lingkungan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SISI KANAN: Keahlian Teknis (Technical Skills) -->
+            <div class="keahlian-kolom reveal-right">
+                <h3 class="sub-title">Keahlian Teknis (Technical Skills)</h3>
+
+                <div class="tech-skills-stack">
+                    <!-- Python Block -->
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <span class="tech-icon">🐍</span>
+                            <h4>Python</h4>
+                        </div>
+                        <ul class="tech-list">
+                            <li>Machine Learning</li>
+                            <li>Visualisasi Data</li>
+                            <li>Data Preprocessing</li>
+                            <li>Time Series Forecasting</li>
+                            <li>Exploratory Data Analysis (EDA)</li>
+                        </ul>
+                    </div>
+
+                    <!-- R Studio Block -->
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <span class="tech-icon">📊</span>
+                            <h4>R Studio</h4>
+                        </div>
+                        <ul class="tech-list">
+                            <li>Visualisasi data</li>
+                            <li>Survival Analisis</li>
+                            <li>Uji Hipotesis</li>
+                            <li>Time Series Forecasting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wave divider: Keahlian (Light) -> Organisasi (Dark) -->
+            <div class="wave-container">
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave"
+                            d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(2, 21, 38, 0.7)" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(2, 21, 38, 0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(2, 21, 38, 0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#021526" />
+                    </g>
+                </svg>
+            </div>
+    </section>
+
+    <section id="organisasi" class="theme-dark">
+        <div id="ocean-bubbles-org" class="bubbles-container"></div>
+        <h2 class="section-title reveal">Pengalaman Organisasi</h2>
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <h3>Ketua - Pojok Statistik Universitas Jenderal Soedirman</h3>
+                <span class="period">Periode 2024/2025 & 2025/2026</span>
+                <p>Memimpin organisasi dalam mengampanyekan literasi data di lingkungan kampus, mengoordinasikan
+                    pelayanan konsultasi statistik bersama Badan Pusat Statistik (BPS), serta menyelenggarakan berbagai
+                    program edukasi sains data bagi mahasiswa dan masyarakat umum.</p>
+
+                <!-- Gallery Foto Organisasi -->
+                <div class="org-gallery">
+                    <div class="org-photo-wrapper">
+                        <img src="assets/pojok_statistik_1.png" alt="Kegiatan Pojok Statistik 2024/2025"
+                            class="org-photo">
+                        <div class="photo-caption">Periode 2024/2025</div>
+                    </div>
+                    <div class="org-photo-wrapper">
+                        <img src="assets/pojok_statistik_2.png" alt="Kegiatan Pojok Statistik 2025/2026"
+                            class="org-photo">
+                        <div class="photo-caption">Periode 2025/2026</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title reveal" style="margin-top: 100px;">Pengalaman Kepanitiaan</h2>
+        <div class="timeline">
+            <!-- Kepanitiaan 1 -->
+            <div class="timeline-item reveal">
+                <h3>Staf Divisi ATP - Soedirman Open Chess Tournament</h3>
+                <span class="period">20 April 2025</span>
+                <p>Bertanggung jawab dalam divisi ATP (Akomodasi, Transportasi, dan Perlengkapan) untuk merencanakan kebutuhan logistik dan perlengkapan turnamen catur, serta mengoordinasikan akomodasi dan transportasi para peserta.</p>
+                <div class="org-gallery" style="max-width: 350px;">
+                    <div class="org-photo-wrapper">
+                        <img src="assets/chess.png" alt="Soedirman Open Chess Tournament 2025" class="org-photo">
+                        <div class="photo-caption">Divisi ATP</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Kepanitiaan 2 -->
+            <div class="timeline-item reveal">
+                <h3>Staf Divisi PDD - StaryNight</h3>
+                <span class="period">8 Oktober 2025</span>
+                <p>Bertanggung jawab dalam divisi PDD (Publikasi, Dekorasi, dan Dokumentasi) untuk mendokumentasikan seluruh rangkaian kegiatan malam seni, merancang media publikasi visual, serta mengonsep dekorasi panggung.</p>
+                <div class="org-gallery" style="max-width: 350px;">
+                    <div class="org-photo-wrapper">
+                        <img src="assets/starynight.png" alt="StaryNight 2025" class="org-photo">
+                        <div class="photo-caption">Divisi PDD</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wave divider: Organisasi (Dark) -> Portofolio (Light) -->
+        <div class="wave-container">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(240, 249, 255, 0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(240, 249, 255, 0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(240, 249, 255, 0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#f0f9ff" />
+                </g>
+            </svg>
+        </div>
+    </section>
+
+    <section id="portofolio" class="theme-light">
+        <h2 class="section-title reveal">Portofolio Kompetisi</h2>
+        <p class="section-desc reveal">Menguji batasan diri, menaklukkan tantangan analisis data yang kompleks, dan mengukir prestasi terbaik di tingkat nasional.</p>
+        <div class="portfolio-grid">
+
+            <!-- Proyek 1 -->
+            <div class="portfolio-card reveal">
+                <div class="portfolio-info">
+                    <span class="portfolio-category">Satria Data - Statistic Infographic Competition</span>
+                    <h3>Dari Gen Z Sehat Mental Menuju Masyarakat Sejahtera</h3>
+                    <p>Analisis dan visualisasi data mengenai isu kesehatan mental pada generasi Z serta dampaknya
+                        terhadap kesejahteraan sosial ekonomi masyarakat di masa depan.</p>
+                </div>
+            </div>
+
+            <!-- Proyek 2 -->
+            <div class="portfolio-card reveal">
+                <div class="portfolio-info">
+                    <span class="portfolio-category">Dokter Data - Essay Competition</span>
+                    <h3>Analisis Sentimen Masyarakat Terhadap Program Makan Bergizi Gratis</h3>
+                    <p>Memanfaatkan teknik Natural Language Processing (NLP) menggunakan Python/R untuk mengeksplorasi
+                        dan mengklasifikasikan opini publik di media sosial terkait kebijakan program pangan pemerintah.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Proyek 3 -->
+            <div class="portfolio-card reveal">
+                <div class="portfolio-info">
+                    <span class="portfolio-category">Gammafest IPB - Data Analytics Competition</span>
+                    <h3>Prediksi Skor Pertandingan Bola</h3>
+                    <p>Menerapkan pemodelan statistik dan algoritma Machine Learning untuk memprediksi hasil akhir dan
+                        skor pertandingan sepak bola berdasarkan historis performa tim dan data statistik pemain.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Wave divider: Portofolio (Light) -> Contact (Dark) -->
+        <div class="wave-container">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(2, 21, 38, 0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(2, 21, 38, 0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(2, 21, 38, 0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#021526" />
+                </g>
+            </svg>
+        </div>
+    </section>
+
+    <section id="contact" class="theme-dark">
+        <div id="ocean-bubbles-contact" class="bubbles-container"></div>
+        <div class="contact-container reveal">
+            <h2 class="section-title">Hubungi Saya</h2>
+            <p>Tertarik untuk berkolaborasi, berdiskusi tentang data, atau sekadar bertukar sapa? Silakan hubungi saya
+                melalui saluran di bawah ini:</p>
+            <div class="contact-links">
+                <a href="mailto:al.hikmawan@mhs.unsoed.ac.id" class="btn">📧 Email Saya</a>
+                <a href="https://instagram.com/fattrizki21" target="_blank" class="btn btn-ig">📸 @fattrizki21</a>
+            </div>
+        </div>
+
+        <!-- Wave divider: Contact (Dark) -> Footer (Darker) -->
+        <div class="wave-container">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(1, 10, 19, 0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(1, 10, 19, 0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(1, 10, 19, 0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#010a13" />
+                </g>
+            </svg>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Al Fath Miftahurrizky Hikmawan.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
